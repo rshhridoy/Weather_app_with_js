@@ -1,0 +1,97 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: hsla(0, 0%, 70%, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'century', sans-serif;
+}
+
+.weatherform{
+    margin: 20px;
+    background-color: hsl(200, 94%, 80%);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 50%, 0.3);
+}
+
+.weatherinput{
+    margin: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 440px;
+    font-family: 'century', sans-serif;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 50%, 0.3);
+}
+
+button[type = "submit"]{
+    margin: 10px;
+    font-family: 'century', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    background-color: hsl(23, 91%, 60%);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 50%, 0.3);
+}
+
+button[type = "submit"]:hover{
+    background-color: hsl(23, 91%, 40%);
+    cursor: pointer;
+}
+
+.card{
+    background: linear-gradient(180deg, hsl(200, 94%, 80%), hsl(23, 91%, 60%));
+    padding: 50px;
+    box-shadow: 2px 2px 5px hsla(0, 0%, 50%, 0.3);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.title{
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 5px 0px;
+}
+
+.title, .temperature{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%,  0%, 0.75);
+    margin-bottom: 25px;
+}
+.humidity{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.descDisplay{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.weatherimg{
+    margin: 0;
+    font-size: 7.5rem;
+}
+
+.errorDisplay{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsla(0, 0%,  0%, 0.75);
+}
