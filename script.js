@@ -51,7 +51,7 @@ const displayWeatherInfo = (data) => {
 
     // temp
     const tempDisplay = document.createElement('p');
-    tempDisplay.textContent = `${(temp - 273).toFixed(1)}°C`;
+    tempDisplay.textContent = `${(temp - 273.15).toFixed(1)}°C`;
     tempDisplay.classList.add('temperature');
 
     card.appendChild(tempDisplay);
