@@ -1,20 +1,38 @@
 const weatherForm = document.querySelector(".weatherform");
 const cityInput = document.querySelector(".weatherinput");
 const card = document.querySelector(".card");
+const apiKey = "96a59546b2500324b6005c230f1032c6";
 
-
-weatherForm.addEventListener('submit', event => {
+weatherForm.addEventListener('submit', async event => {
     event.preventDefault();
 
     const city = cityInput.value;
 
     if(city){
-
+        try{
+            const weatherData = await getWeatherInfo(city);
+            displayWeatherInfo(weatherData);
+        }
+        catch(error){
+            console.error(error);
+            displayError(error);
+        }
     }
     else{
         displayError("Please Enter a City");
     }
 })
+
+async function getWeatherInfo(city) {
+    const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    
+    const response = await fetch(apiurl);
+    console.log(response);
+}
+
+const displayWeatherInfo = (data) => {
+
+}
 
 const displayError = (message) =>{
     const errorDisplay = document.createElement('p');
