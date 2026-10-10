@@ -28,10 +28,16 @@ async function getWeatherInfo(city) {
     
     const response = await fetch(apiurl);
     console.log(response);
+    if(!response.ok){
+        throw new Error("Please Enter a valid City");
+    }
+    else{
+        return await response.json();
+    }
 }
 
 const displayWeatherInfo = (data) => {
-
+    console.log(data)
 }
 
 const displayError = (message) =>{
